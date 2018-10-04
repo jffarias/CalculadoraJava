@@ -16,10 +16,9 @@ public class Calculadora {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Operacion operacion = new Operacion();
-        operacion.suma(-5, 2);
-        String suma = operacion.getResSuma();
-        System.out.println(suma);
+        double n1=20,n2=10;
+        Suma suma = new Suma(n1, n2);
+        suma.mostrarResultador();
     }
     
 }

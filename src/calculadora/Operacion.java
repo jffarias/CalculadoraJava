@@ -10,40 +10,26 @@ package calculadora;
  * @author i5
  */
 public class Operacion {
-    private String resSuma;
-    private String resResta;
-    private String resMult;
-    private String resDiv;
+    private double n1;
+    private double n2;
+    private double result;
 
-    public String getResSuma() {
-        return resSuma;
-    }
-
-    public String getResResta() {
-        return resResta;
+    public double getResult() {
+        return result;
     }
 
-    public String getResMult() {
-        return resMult;
+    public void setResult(double result) {
+        this.result = result;
     }
+    private char operador;
 
-    public String getResDiv() {
-        return resDiv;
+    public Operacion(Double p_n1, Double p_n2, char p_operador){
+        this.n1 = p_n1;
+        this.n2 = p_n2;
+        this.operador = p_operador;
     }
     
-    public void suma(int operador1, int operador2){
-        resSuma = String.valueOf(operador1 + operador2);
-    }
-    
-    public void resta(int operador1, int operador2){
-        resResta = String.valueOf(operador1 - operador2);
-    }
-    
-    public void multiplicacion(int operador1, int operador2){
-        resMult = String.valueOf(operador1 * operador2);
-    }
-    
-    public void divicion(int operador1, int operador2){
-        resDiv = String.valueOf(operador1/operador2);
+    public void mostrarResultador(){
+        System.out.println(this.n1+" "+this.operador+" "+this.n2+" = "+this.result);
     }
 }
