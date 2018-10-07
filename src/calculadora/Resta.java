@@ -9,6 +9,11 @@ package calculadora;
  *
  * @author i5
  */
-public class Resta {
-    
+public class Resta extends Operacion{
+    double rest;
+    public Resta(double p_n1, double p_n2){
+        super(p_n1, p_n2,'-');
+        this.rest = p_n1 - p_n2;
+        this.setResult(this.rest);
+    }
 }

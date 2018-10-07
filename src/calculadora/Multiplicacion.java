@@ -9,6 +9,11 @@ package calculadora;
  *
  * @author i5
  */
-public class Multiplicacion {
-    
+public class Multiplicacion extends Operacion {
+    double mult;
+    public Multiplicacion(double p_n1, double p_n2){
+    super(p_n1, p_n2, '*');
+    this.mult = p_n1 * p_n2;
+    this.setResult(this.mult);
+   }
 }
